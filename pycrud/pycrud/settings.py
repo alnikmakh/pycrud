@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2sg7bqqbd_mvzl7dbq)(9*53h%gw4x$w_wq0lf266%7ot(u&07
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -55,9 +55,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pycrud.urls'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
@@ -87,7 +85,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'alexandermakhorin',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
     # 'default': {
